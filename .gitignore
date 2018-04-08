@@ -1,6 +1,9 @@
 # Compiled Python files
 *.pyc
 
+#swap, other stuff
+*.swo
+
 # Folder view configuration files
 .DS_Store
 Desktop.ini
