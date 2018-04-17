@@ -8,6 +8,7 @@ filetype off                  " required
 set relativenumber
 set wildignore+=*/node_modules/*,_site,*/__pycache__,*/venv/*,*/target/*,*/.vim$,\~$,*/.log,*/.aux,*/.cls,*/.aux,*/.bbl,*/.blg,*/.fls,*/.fdb*/,*/.toc,*/.out,*/.glo,*/.log,*/.ist,*/.fdb_latexmk
 set encoding=utf-8
+set textwidth=120
 "set spell
 
 "split navigations
@@ -20,7 +21,7 @@ vnoremap <C-c> "*y
 nnoremap <C-e> :lnext
 " Enable folding
 set foldlevel=99
-set foldmethod=syntax
+"set foldmethod=syntax
 " Enable folding with the spacebar
 nnoremap <space> za
 "pymode mappings
@@ -43,7 +44,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 " add vim plugins here
 "
-"Plugin 'lervag/vimtex'
+Plugin 'lervag/vimtex'
 "Plugin 'python-mode/python-mode'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'powerman/vim-plugin-autosess'
@@ -138,17 +139,13 @@ let g:UltiSnipsEditSplit="vertical"
 "------------------------------------------------------------
 " LATEX SETUP 
 "------------------------------------------------------------
-" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
-" filetype plugin on
+let g:vimtex_complete_recursive_bib=1
+"let g:vimtex_fold_enabled=1
+autocmd BufEnter *.tex set foldmethod=expr
+autocmd BufEnter *.tex set foldexpr=vimtex#fold#level(v:lnum)
+autocmd BufEnter *.tex set foldtext=vimtex#fold#text()
 
-" OPTIONAL: This enables automatic indentation as you type.
-filetype indent on
 
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults
-to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
 "------------------------------------------------------------
 " LATEX END 
 "------------------------------------------------------------
