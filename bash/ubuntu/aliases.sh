@@ -12,6 +12,7 @@ alias jnbup="docker container start tensorflow-notebook"
 ###############################
 alias cdnb="cd /home/pascalwhoop/Documents/Code/Jupyter/Notebooks"
 alias cdtac="cd ~/Documents/Code/University/powerTAC"
+alias cddot="cd ~/Documents/Code/dotfiles"
 alias cdblog='cd ~/Documents/Code/blog/pascalwhoop.github.io'
 alias cdcode='cd ~/Documents/Code'
 alias cdweb='cd ~/Documents/Code/website/pascalbrokmeier.de'

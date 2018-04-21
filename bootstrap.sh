@@ -9,6 +9,7 @@ function doIt() {
 		--exclude ".DS_Store" \
 		--exclude "*.swp" \
 		--exclude ".osx" \
+		--exclude "bash/" \
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \

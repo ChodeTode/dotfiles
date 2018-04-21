@@ -6,12 +6,13 @@ filetype off                  " required
 "vim customisations and custom mappings
 "------------------------------------------------------------
 set relativenumber
-set wildignore+=*/node_modules/*,_site,*/__pycache__,*/venv/*,*/target/*,*/.vim$,\~$,*/.log,*/.aux,*/.cls,*/.aux,*/.bbl,*/.blg,*/.fls,*/.fdb*/,*/.toc,*/.out,*/.glo,*/.log,*/.ist,*/.fdb_latexmk
+set wildignore+=*/vendor,*/node_modules/*,_site,*/__pycache__,*/venv/*,*/target/*,*/.vim$,\~$,*/.log,*/.aux,*/.cls,*/.aux,*/.bbl,*/.blg,*/.fls,*/.fdb*/,*/.toc,*/.out,*/.glo,*/.log,*/.ist,*/.fdb_latexmk
 set encoding=utf-8
 set textwidth=120
 "set spell
 
 "split navigations
+noremap <F3> :Autoformat<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -44,6 +45,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 " add vim plugins here
 "
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'lervag/vimtex'
 "Plugin 'python-mode/python-mode'
 Plugin 'davidhalter/jedi-vim'
@@ -137,6 +139,10 @@ let g:UltiSnipsExpandTrigger="<c-e>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 "------------------------------------------------------------
+" WEB / HTML / CSS SETUP
+"------------------------------------------------------------
+autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
+"------------------------------------------------------------
 " LATEX SETUP 
 "------------------------------------------------------------
 let g:vimtex_complete_recursive_bib=1
@@ -144,12 +150,6 @@ let g:vimtex_complete_recursive_bib=1
 autocmd BufEnter *.tex set foldmethod=expr
 autocmd BufEnter *.tex set foldexpr=vimtex#fold#level(v:lnum)
 autocmd BufEnter *.tex set foldtext=vimtex#fold#text()
-
-
-"------------------------------------------------------------
-" LATEX END 
-"------------------------------------------------------------
-
 "------------------------------------------------------------
 " SOLARIZE THEME 
 "------------------------------------------------------------

@@ -41,7 +41,7 @@ shopt -s histappend
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 #add all generic scripts to path / source them
-GENERIC_FILES=~/Documents/Code/bash/generic/*
+GENERIC_FILES=~/Documents/Code/dotfiles/bash/generic/*
 for f in $GENERIC_FILES
 do
   # take action on each file. $f store current file name
@@ -49,7 +49,7 @@ do
 done
 
 #add all ubuntu specific files
-UBUNTU_FILES=~/Documents/Code/bash/ubuntu/*
+UBUNTU_FILES=~/Documents/Code/dotfiles/bash/ubuntu/*
 for f in $UBUNTU_FILES
 do
   # take action on each file. $f store current file name

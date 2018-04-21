@@ -1,1 +1,1 @@
-source ~/Documents/Code/bash/ubuntu_bootstrap.sh
+source ~/Documents/Code/dotfiles/bash/ubuntu_bootstrap.sh
