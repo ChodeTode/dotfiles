@@ -1,6 +1,6 @@
 #alias and shortcuts
 alias kub="kubectl"
-alias todo="cd ~/Documents/Code/todo/ && vim ./"
+alias todo="cd ~/Documents/Syncthing/Notes && vim ./"
 alias rmswp='find ./ -name "*.swp" -exec rm {} \;'
 alias jupystart="nvidia-docker start jupyter && docker exec -it jupyter bash -c \"jupyter notebook list\""
 alias editconky="vim ~/.config/conky/pascalwhoop/conky.conf"
