@@ -22,3 +22,13 @@ if (string.match(win, "intellij idea")) then
     set_window_workspace(4)
     debug_print("putting trello")
 end
+
+if (string.match(app, "sxiv")) then
+    set_window_fullscreen(true)
+    debug_print("putting sxiv in full screen")
+end
+
+if (string.match(app, "caja")) then
+    debug_print("putting caja")
+    set_window_geometry(1291,725,1264,1372)
+end
