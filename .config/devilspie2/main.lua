@@ -6,20 +6,10 @@ if (string.match(app, "firefox")) then
     debug_print("putting firefox")
 end
 
-if (string.match(app, "urxvt")) then
-    set_window_geometry(1291,15,1258,669)
-    debug_print("putting urxvt")
-end
 
 if (string.match(app, "trello")) then
     set_window_workspace(5)
     set_window_fullscreen(true)
-    debug_print("putting trello")
-end
-
-if (string.match(win, "intellij idea")) then
-    set_window_geometry(11,15,2538,2082)
-    set_window_workspace(4)
     debug_print("putting trello")
 end
 
@@ -31,4 +21,11 @@ end
 if (string.match(app, "caja")) then
     debug_print("putting caja")
     set_window_geometry(1291,725,1264,1372)
+end
+if (string.match(win, "plex")) then
+    pin_window()
+    undecorate_window()
+    make_always_on_top()
+    debug_print("putting caja")
+    set_window_geometry(10,1454,1266,696)
 end

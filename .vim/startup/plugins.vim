@@ -10,24 +10,29 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 " add vim plugins here
 "
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'lervag/vimtex'
+
 "Plugin 'python-mode/python-mode'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'powerman/vim-plugin-autosess'
-Plugin 'scrooloose/nerdtree'
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'ctrlp.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'junegunn/vim-easy-align'
+
+Plugin 'majutsushi/tagbar'
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'tpope/vim-fugitive'
 Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'abolish.vim'
+Plugin 'ctrlp.vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'honza/vim-snippets'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'lervag/vimtex'
+Plugin 'powerman/vim-plugin-autosess'
 Plugin 'repeat.vim'
+Plugin 'scrooloose/nerdtree'
 Plugin 'surround.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

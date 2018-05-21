@@ -36,3 +36,9 @@ if (string.match(win,"write:")) then
     set_window_geometry(1291,725,1264,1372)
     debug_print("putting compose email")
 end
+
+if (string.match(win,"messenger")) then
+    set_window_workspace(1)
+    set_window_geometry(2565,725,1264,1372)
+    debug_print("putting messenger")
+end

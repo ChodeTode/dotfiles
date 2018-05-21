@@ -57,8 +57,8 @@ URxvt.cursorUnderline:   false
 ! Pointer
 URxvt.pointerBlank:      true
 !!Source http://github.com/altercation/solarized
-!*background:             #002b36
-urxvt*background:        rgba:0000/2b00/3600/e900
+*background:             #002b36
+!urxvt*background:        rgba:0000/2b00/3600/e900
 *foreground:             #657b83
 !!*fading: 40
 *fadeColor:              #002b36
