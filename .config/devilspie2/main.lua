@@ -1,6 +1,9 @@
 win = string.lower(get_window_name())
 app = string.lower(get_application_name())
 
+--- applied to all windows
+undecorate_window()
+
 if (string.match(app, "firefox")) then
     set_window_geometry(1291,15,2538,2082)
     debug_print("putting firefox")
@@ -24,7 +27,6 @@ if (string.match(app, "caja")) then
 end
 if (string.match(win, "plex")) then
     pin_window()
-    undecorate_window()
     make_always_on_top()
     debug_print("putting caja")
     set_window_geometry(10,1454,1266,696)
