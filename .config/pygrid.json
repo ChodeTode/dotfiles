@@ -2,8 +2,8 @@
   "default": {
     "maxheight": 0.67,
     "maxwidth": 0.67,
-    "minheight": 0.33,
-    "minwidth": 0.25,
+    "minheight": 0.20,
+    "minwidth": 0.20,
     "padding": [
       10,
       10,
@@ -12,7 +12,7 @@
     ],
     "snaptocursor": false,
     "spacing": 15,
-    "xdivs": 3,
+    "xdivs": 4,
     "ydivs": 3
    }
 }
