@@ -2,6 +2,11 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# logging in without a display manager. When no x is running yet, start one
+if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ] && [ -z "$TMUX" ]; then
+  exec startx
+fi
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
