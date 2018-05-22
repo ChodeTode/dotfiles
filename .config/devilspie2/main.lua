@@ -41,6 +41,12 @@ if (string.match(win, "intellij idea")) then
     set_window_workspace(3)
 end
 
+if (string.match(win, "pycharm")) then
+    fit_to_grid(app, 1,1,2,3)
+    set_window_workspace(3)
+end
+
+
 if (string.match(app, "urxvt")) then
     ---set_window_geometry(1291,15,1258,669)
     fit_to_grid(app, 2,1,2,1)
@@ -50,8 +56,13 @@ if (string.match(app, "zathura")) then
     fit_to_grid(app, 4,1,1,3)
 end
 --- floats over other windows
-if (string.match(app, "phone-cam")) then
+
+if (string.match(app, "phone")) then
+    debug_print("putting" .. app)
+    set_skip_tasklist(true)
+    set_skip_pager(true)
     make_always_on_top()
+    set_opacity(0.8)
     set_window_geometry(3178,1716,652,368)
     pin_window()
 end
@@ -111,9 +122,9 @@ if (string.match(win,"telegram")) then
     fit_to_grid(app, 2,1,2,1)
 end
 
-if (string.match(win,"signal")) then
+if (string.match(app,"signal")) then
     set_window_workspace(1)
-    TODO(2565,15,1264,669)
+    fit_to_grid(app, 1,1,1,2)
 end
 
 if (string.match(win,"mozilla thunderbird")) then

@@ -1,6 +1,5 @@
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/
-
 export EDITOR=vim
+export XDG_DATA_HOME="~/.local/share/"
 #setting display env variable for tmux
 export DISPLAY=":0"
 #customize bash prompt
