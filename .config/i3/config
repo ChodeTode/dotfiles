@@ -4,17 +4,18 @@
 # styling / layout
 # ------------------------------------------------------------------------------
 # setting gaps specific settings and styling
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 1
 gaps inner 7
 gaps outer -5
 
 font xft:Fantasque Sans Mono 8
 
 # Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
-bar {
-    status_command i3status
-    position top
-}
+#bar {
+#    status_command i3status
+#    position bottom
+#    modifier $mod
+#}
 
 for_window [floating] border none
 
@@ -28,6 +29,11 @@ set $term --no-startup-id urxvt
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+#media keys
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -10%
+bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute 1 toggle
 
 bindsym $mod+q         kill
 
@@ -51,6 +57,8 @@ mode "$mode_launcher" {
 # starting utilities
 #bindsym Mod2+space exec albert toggle
 bindsym Mod1+space exec --no-startup-id albert toggle
+bindsym control+$mod+space exec copyq toggle
+for_window [class="CopyQ"] floating enable
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -168,24 +176,29 @@ mode "resize" {
         bindsym Caps_Lock mode "default"
 }
 # resizing windows the fast way
-bindsym $mod+Ctrl+h resize grow width 3 px or 3 ppt
+bindsym $mod+Ctrl+h resize shrink width 3 px or 3 ppt
 bindsym $mod+Ctrl+j    resize grow height 3 px or 3 ppt
 bindsym $mod+Ctrl+k  resize shrink height 3 px or 3 ppt
-bindsym $mod+Ctrl+l  resize shrink width 3 px or 3 ppt
+bindsym $mod+Ctrl+l  resize grow width 3 px or 3 ppt
 
 bindsym $mod+r mode "resize"
 
 
 # starting any third part applications
 # compositor
-exec --no-startup-id "compton"
+exec --no-startup-id compton
 # my variant of the dmenu
-exec --no-startup-id "albert"
-exec --no-startup-id "copyq"
+exec --no-startup-id albert
+exec --no-startup-id copyq
+exec --no-startup-id blueman-applet
 # system info
-exec --no-startup-id "conky --config '~/.config/conky/pascalwhoop/conky.conf'"
+exec --no-startup-id "conky --config '/home/pascalwhoop/.config/conky/pascalwhoop/conky.conf'"
 # loading data for urxvt and others
 exec --no-startup-id "xrdb ~/.Xresources"
 # avoids tearing
 exec --no-startup-id "nvidia-settings --assign CurrentMetaMode=\"nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }\""
 exec --no-startup-id redshift
+#setting background
+exec --no-startup-id feh --bg-fill ~/Pictures/stars_house_island.jpg
+exec --no-startup-id polybar --restart example
+exec --no-startup-id copyq
