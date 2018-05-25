@@ -10,7 +10,7 @@ function doIt() {
 		--exclude ".DS_Store" \
 		--exclude "*.swp" \
 		--exclude ".osx" \
-        --exclude ".fonts" \ 
+        --exclude ".fonts" \
 		--exclude "bash/" \
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
