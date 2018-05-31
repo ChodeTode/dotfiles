@@ -7,6 +7,7 @@ alias editconky="vim ~/.config/conky/pascalwhoop/conky.conf"
 alias plexup="docker container start plex"
 alias plexdown="docker container stop plex"
 alias jnbup="docker container start tensorflow-notebook"
+alias goagent="cd ~/Documents/Code/University/powerTAC/python-agent && activate"
 
 # cd to specific directories
 ###############################

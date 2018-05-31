@@ -15,9 +15,9 @@ plex:
     token: "BnY3AvppWhYNN66jaVkF"
     #chroma:
     #    auto: yes
-musicbrainz:
-    host: localhost:5000
-    ratelimit: 1000
+    #musicbrainz:
+    #    host: localhost:5000
+    #    ratelimit: 1000
 match:
     strong_rec_thresh: 0.15 #means 70% at least
     distance_weights:

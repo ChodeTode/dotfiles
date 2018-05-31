@@ -1,5 +1,6 @@
 export EDITOR=vim
-export XDG_DATA_HOME="~/.local/share/"
+export XDG_DATA_HOME="/home/pascalwhoop/.local/share"
+export JAVA_HOME="/usr/lib/jvm/default-java"
 #setting display env variable for tmux
 export DISPLAY=":0"
 #customize bash prompt

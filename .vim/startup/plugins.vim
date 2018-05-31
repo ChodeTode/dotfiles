@@ -21,11 +21,13 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'abolish.vim'
 Plugin 'ctrlp.vim'
+"Plugin 'dbmrq/vim-ditto'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'honza/vim-snippets'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'lervag/vimtex'
 Plugin 'powerman/vim-plugin-autosess'
+"Plugin 'reedes/vim-wordy'
 Plugin 'repeat.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'surround.vim'
@@ -109,3 +111,41 @@ nmap ga <Plug>(EasyAlign)
 "------------------------------------------------------------
 "ctrlp show hidden files
 let g:ctrlp_show_hidden=1
+"------------------------------------------------------------
+" ditto.vim PLUGIN SETUP
+"------------------------------------------------------------
+" Use autocmds to check your text automatically and keep the highlighting
+" up to date (easier):
+"au FileType markdown,text,tex DittoOn  " Turn on Ditto's autocmds
+"nmap <leader>di <Plug>ToggleDitto      " Turn Ditto on and off
+
+" If you don't want the autocmds, you can also use an operator to check
+" specific parts of your text:
+" vmap <leader>d <Plug>Ditto	       " Call Ditto on visual selection
+" nmap <leader>d <Plug>Ditto	       " Call Ditto on operator movement
+
+"nmap =d <Plug>DittoNext                " Jump to the next word
+"nmap -d <Plug>DittoPrev                " Jump to the previous word
+"nmap +d <Plug>DittoGood                " Ignore the word under the cursor
+"nmap _d <Plug>DittoBad                 " Stop ignoring the word under the cursor
+"nmap ]d <Plug>DittoMore                " Show the next matches
+"nmap [d <Plug>DittoLess                " Show the previous matches
+
+"------------------------------------------------------------
+" Wordy PLUGIN SETUP
+"------------------------------------------------------------
+"noremap <silent> <F8> :<C-u>NextWordy<cr>
+"let g:wordy#ring = [
+"  \ ['weak', 'weasel', 'opinion', 'adverbs', 'adjectives'],
+"  \ 'weak',
+"  \ ['being', 'passive-voice', ],
+"  \ 'business-jargon',
+"  \ 'weasel',
+"  \ 'puffery',
+"  \ ['problematic', 'redundant', ],
+"  \ ['colloquial', 'idiomatic', 'similies', ],
+"  \ 'art-jargon',
+"  \ ['contractions', 'opinion', 'vague-time', 'said-synonyms', ],
+"  \ 'adjectives',
+"  \ 'adverbs',
+"  \ ]

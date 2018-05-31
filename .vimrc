@@ -13,5 +13,9 @@ syntax enable
 set background=dark
 "let g:solarized_termcolors=256
 colorscheme solarized
-hi Normal ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
+"hi SpellBad term=reverse
+"hi SpellCap term=reverse
+"hi SpellRare term=reverse
+"hi SpellLocal term=reverse
 
